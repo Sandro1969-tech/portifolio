@@ -1,0 +1,267 @@
+/* Import da fonte */
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap");
+
+/* Reset global */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Variáveis de cor */
+:root {
+  --white: #fff;
+  --dark1: #34344e;
+  --dark2: #3a415a;
+  --dark3: #566981;
+  --dark4: #89a7b1;
+  --dark5: #cbdad5;
+  --cyan1: #70e3ea;
+}
+
+/* Corpo */
+body {
+  background-color: var(--dark1);
+  font-family: 'Lato', sans-serif;
+  color: var(--white);
+  line-height: 1.6;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--dark2);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--dark3);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--dark4);
+}
+html {
+  scroll-behavior: smooth;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding: .8rem;
+  background-color: #2f2f46;
+  min-height: 70px;
+}
+.img-logo {
+  height: 50px;
+}
+nav {
+  display: flex;
+  gap: 2rem;
+  justify-content: center;
+}
+.nav-links {
+  text-decoration: none;
+  color: var(--white);
+  transition: .4s;
+}
+.nav-links:hover {
+  color: var(--dark4);
+  text-decoration: underline;
+}
+
+/* Botões */
+button {
+  padding: .6rem 1.2rem;
+  font-size: .9rem;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: .4s;
+  background-color: transparent;
+  border: 1px solid var(--white);
+  color: var(--white);
+}
+button:hover {
+  background-color: var(--dark3);
+}
+
+/* Primeira Seção */
+.first-section {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 4rem 2rem;
+  min-height: 80vh;
+  flex-wrap: wrap;
+}
+.box-text-main {
+  max-width: 500px;
+}
+h1 {
+  font-size: 3rem;
+  letter-spacing: 2px;
+  margin-bottom: 1rem;
+}
+strong {
+  color: var(--cyan1);
+}
+.link-action {
+  display: inline-block;
+  margin-top: 20px;
+  text-decoration: none;
+  background-color: var(--cyan1);
+  color: var(--dark1);
+  padding: 10px 25px;
+  border-radius: 5px;
+  font-weight: bold;
+}
+.box-img-main {
+  max-width: 350px;
+}
+.img-profile {
+  border-radius: 50%;
+  width: 100%;
+  border: 5px solid var(--cyan1);
+  box-shadow: 1px 1px 1px var(--cyan1);
+}
+
+/* Segunda Seção (Experiências) */
+.second-section {
+  background-color: var(--dark2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.second-section ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+.second-section ul li {
+  font-size: 1.2rem;
+  transition: .3s;
+}
+
+/* Terceira Seção (Quem sou eu) */
+.third-section {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.third-section div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4rem;
+  flex-wrap: wrap;
+  margin-top: 2rem;
+}
+.third-section > div img {
+  width: 250px;
+  border-radius: 10px;
+}
+.third-section > div p {
+  max-width: 600px;
+  color: var(--white);
+  text-align: justify;
+}
+
+/* Quarta Seção (Projetos) */
+.fourth-section {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+  padding: 2rem;
+}
+.fourth-section a {
+  display: block;
+  background-color: #3f3f5f;
+  color: #fff;
+  padding: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.3s, background-color 0.3s;
+}
+.fourth-section a:hover {
+  transform: scale(1.05);
+  background-color: #25D366;
+  cursor: pointer;
+}
+
+/* Rodapé */
+/* Rodapé */
+footer {
+  padding: 2rem;
+  background-color: #2f2f46;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+footer > div {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+/* Ícones gerais */
+footer img {
+  width: 40px;
+  height: 40px;
+  transition: transform 0.3s;
+}
+
+footer img:hover {
+  transform: scale(1.2);
+  filter: brightness(1.2);
+}
+
+/* Ícone WhatsApp */
+footer i.fa-whatsapp {
+  font-size: 50px;       /* tamanho maior */
+  color: #25D366;        /* verde fixo */
+  transition: transform 0.3s;
+}
+
+footer i.fa-whatsapp:hover {
+  transform: scale(1.2);
+}
+
+#meus-projetos-list {
+    display: flex;
+    flex-wrap: wrap;         /* Faz os itens pularem para a linha de baixo */
+    justify-content: center; /* Centraliza o bloco de projetos */
+    gap: 12px;               /* Espaço entre os botões */
+    padding: 20px;
+    max-width: 1000px;       /* Não deixa espalhar demais em telas grandes */
+    margin: 0 auto;          /* Centraliza o container na página */
+}
+
+#meus-projetos-list a {
+    background-color: rgba(255, 255, 255, 0.1); /* Fundo levemente claro/transparente */
+    color: #00d2ff;          /* Cor do texto (um ciano/azul claro combina com seu fundo) */
+    text-decoration: none;
+    padding: 10px 20px;      /* Espaçamento interno do botão */
+    border: 1px solid rgba(0, 210, 255, 0.3);
+    border-radius: 50px;     /* Deixa as pontas arredondadas (estilo pílula) */
+    font-size: 14px;
+    font-family: sans-serif;
+    transition: all 0.3s ease;
+}
+
+#meus-projetos-list a:hover {
+    background-color: #00d2ff; /* Inverte as cores ao passar o mouse */
+    color: #1a1a2e;            /* Cor do fundo do seu site no texto */
+    transform: scale(1.05);    /* Dá um leve zoom */
+}
